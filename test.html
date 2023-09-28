@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Slider with Left-Aligned Captions and Animation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS for slider */
+    .slider-container {
+      position: relative;
+    }
+
+    .slider-caption {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel-inner img {
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* Animation */
+    .slider-caption.animate {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="slider-container">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" alt="Slide 1">
+              <div class="slider-caption">Caption for Slide 1</div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slider-container">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" alt="Slide 2">
+              <div class="slider-caption">Caption for Slide 2</div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slider-container">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" alt="Slide 3">
+              <div class="slider-caption">Caption for Slide 3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Add animation class to caption when slide changes
+  $('#myCarousel').on('slide.bs.carousel', function () {
+    $('.slider-caption').removeClass('animate');
+  });
+
+  $('#myCarousel').on('slid.bs.carousel', function () {
+    $('.carousel-item.active .slider-caption').addClass('animate');
+  });
+</script>
+</body>
+</html>
