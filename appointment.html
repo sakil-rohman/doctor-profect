@@ -29,11 +29,11 @@ a{
         color:#1370B5;
     }
     
-.social_icon li{
+.social_icon div{
 list-style: none;
 display: inline-block;
 }
-.social_icon li a {
+.social_icon div a {
 
 width: 30px;
 height: 30px;
@@ -45,41 +45,41 @@ border-radius: 50%;
 display: inherit;
 color: #727272;
 }
-.social_icon li a i{
+.social_icon div a i{
 
 
 color: #727272;
 }
 
-.social_icon li:nth-child(1) a:hover{
+.social_icon div:nth-child(1) a:hover{
 background: #3b5999;
 
 }
-.social_icon li:nth-child(1) a:hover i{
+.social_icon div:nth-child(1) a:hover i{
 color: #fff;
 
 }
-.social_icon li:nth-child(2) a:hover{
+.social_icon div:nth-child(2) a:hover{
 background: #55acee;
 
 }
-.social_icon li:nth-child(2) a:hover i{
+.social_icon div:nth-child(2) a:hover i{
 color: #fff;
 
 }
-.social_icon li:nth-child(3) a:hover{
+.social_icon div:nth-child(3) a:hover{
 background: #dd4b39;
 
 }
-.social_icon li:nth-child(3) a:hover i{
+.social_icon div:nth-child(3) a:hover i{
 color: #fff;
 
 }
-.side_icon li{
+.side_icon div{
 list-style: none;
 display: inline-block;
 }
-.side_icon li a{
+.side_icon div a{
 
 width: 50px;
 height: 50px;
@@ -563,15 +563,70 @@ h5 {
 .mb-30 {
     margin-bottom: 30px;
 }
+.sider_section{
+   
+  width: 100%; 
+  height: 600px;
 
-.well-block {
-    background-color: #fff;
-    border: 1px solid #e9e6e8;
-    padding: 40px;
 }
 
-.well-title {
-    margin-bottom: 40px;
+.slider_content{
+  width: 70%;
+    padding-left: 150px;
+}
+@media screen and (max-width:992px){
+  .top-2-edgs{
+    display: none;;
+  }
+  .sider_section{
+   
+    margin-top: -10px;
+    height: 300px;
+
+}
+.navbar{
+  z-index: 900;
+  margin-top: 30px;
+}
+#navbarScroll{
+  
+  height: 70vh;
+   
+   
+}
+.carousel-item, .slider_image{
+  height: 262px;
+}
+.slider_content{
+  /* border: 5px solid red; */
+    padding-left: 0;
+    width: 100%;
+    padding-top: 0rem!important;
+}
+.subtext_slider{
+  font-size: 10px;
+}
+.titeltext_slider {
+  font-size: 18px;
+}
+.slider_text {
+  font-size: 11px;
+  line-height: 15px;
+}
+.dark_button {
+  min-width: 70px;
+    font-size: 12px;
+}
+.light_button {
+  min-width: 70px;
+    font-size: 12px;
+}
+.buttons_group {
+    display: inline-block;
+}
+/* .pt-5 {
+    padding-top: 0rem!important;
+} */
 }
 
 </style>
@@ -579,8 +634,8 @@ h5 {
   <body>
     <div class="contailer-fluid" style="height: 150px;">
         <div class="row top-edgs" ></div>
-        <div class="container">
-            <div class="row p-2" style="font-size: 14px;;">
+        <div class="container " >
+            <div class="row p-2 top-2-edgs" style="font-size: 14px;;">
                 <div class="col-md-8">
                     <div class="row">
 
@@ -599,20 +654,21 @@ h5 {
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <ul class="social_icon">
-                        <li>
+                    <div class="social_icon">
+                        <div>
                           <a href="#">
                             <i class="fa fa-facebook-f icon"></i>    </a>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                           <a href="#"><i class="fa fa-twitter icon"></i></a>
-                        </li>
+                        </div>
                         
-                        <li>
-                          <a href="#"><i class="fa fa-youtube icon"></i></a></li>
-                      </ul>
+                        <div>
+                          <a href="#"><i class="fa fa-youtube icon"></i></a></div>
+                      </div>
                 </div>
             </div>
+            
            
             <nav class="navbar navbar-expand-lg bg-light " style=" border-radius: 30px;
             background-color: #ededed!important;
@@ -621,13 +677,13 @@ h5 {
                   <a class="navbar-brand" href="#">
                     <img src="logo.png" alt="" width="200">
                   </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" >
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="/*--bs-scroll-height: 207px;*/">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html ">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="about_us.html">About us</a>
@@ -648,11 +704,11 @@ h5 {
                       </li>
                     </ul>
                     <div class="d-flex side_icon">
-                        <li>
+                        <div>
                             <a href="#">
                                 <i class="fa fa-search icon_side" aria-hidden="true"></i>
 
-                          </li>
+                            </div>
                           <!-- HTML !-->
                           <a href="appointment.html">
                               <button class="button-79 " role="button">Appointment</button>
@@ -672,9 +728,6 @@ h5 {
 
         </div>
     </div>
-   
-
-
 
     
     <div class="container mt-5">
@@ -874,8 +927,8 @@ h5 {
   
      
      
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-    </body>
-  </html>
+       
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>
